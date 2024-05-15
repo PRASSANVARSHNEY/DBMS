@@ -1,0 +1,34 @@
+create table client_master(
+    client_no varchar(6),
+    name varchar(20),
+    address1 varchar(30),
+    address2 varchar(30),
+    city varchar(15),
+    state varchar(15),
+    pincode number(6),
+    bal_due number(10,2)
+);
+
+
+desc client_master
+create table product_master(
+    product_no varchar(6),
+    description varchar(20),
+    profit_percentage number(6),
+    unit_measure varchar(10),
+    qty_on_hand number(6),
+    reorder_lvl number(6),
+    sell_price number(7,2),
+    cost_price number(7,2)   
+);
+
+alter table client_master add DOB date;
+desc client_master
+alter table client_master modify client_no number;
+desc client_master
+rename product_master to productmaster;
+drop table client_master, productmaster;
+desc client_master;
+
+
+drop table productmaster;
